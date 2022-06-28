@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bibliotech</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-big.ico">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Seleccionar y subir un libro digital en formato PDF</h1>
+    <div>
+        <form id="uploadForm" method="POST" enctype="multipart/form-data">
+            <label for="name">Nombre del apunte pdf:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="author">Nombre del author:</label>
+            <input type="text" id="author" name="author"><br>
+
+            <label for="topic">Nombre del tema/área:</label>
+            <input type="text" id="topic" name="topic"><br>
+           
+            <label for="file">Select a file:</label>
+            <input id="file" type="file" name=".pdf" accept="application/pdf">
+            <br><br>
+            <input type="submit">
+        </form>
+    </div>
+    <iframe id="dirIframe" src="./uploaded_files/" width="100%" height="500" frameborder="0" target="_blank">
+    </iframe>
+</body>
+<script type="text/javascript" src="controller.js"></script>
+</html>
